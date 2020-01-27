@@ -4,7 +4,7 @@
 #
 Name     : php-scrypt
 Version  : 1.4.2
-Release  : 2
+Release  : 3
 URL      : https://pecl.php.net//get/scrypt-1.4.2.tgz
 Source0  : https://pecl.php.net//get/scrypt-1.4.2.tgz
 Summary  : No detailed summary available
@@ -31,6 +31,7 @@ lib components for the php-scrypt package.
 
 %prep
 %setup -q -n scrypt-1.4.2
+cd %{_builddir}/scrypt-1.4.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -49,4 +50,4 @@ make  %{?_smp_mflags}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20180731/scrypt.so
+/usr/lib64/extensions/no-debug-non-zts-20190902/scrypt.so
