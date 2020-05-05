@@ -4,7 +4,7 @@
 #
 Name     : php-scrypt
 Version  : 1.4.2
-Release  : 5
+Release  : 6
 URL      : https://pecl.php.net//get/scrypt-1.4.2.tgz
 Source0  : https://pecl.php.net//get/scrypt-1.4.2.tgz
 Summary  : No detailed summary available
