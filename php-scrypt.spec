@@ -4,13 +4,14 @@
 #
 Name     : php-scrypt
 Version  : 1.4.2
-Release  : 11
+Release  : 12
 URL      : https://pecl.php.net//get/scrypt-1.4.2.tgz
 Source0  : https://pecl.php.net//get/scrypt-1.4.2.tgz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause
 BuildRequires : buildreq-php
+Patch1: PHP-8.patch
 
 %description
 The source code under this directory is taken from the client for the
@@ -23,6 +24,7 @@ utility.
 %prep
 %setup -q -n scrypt-1.4.2
 cd %{_builddir}/scrypt-1.4.2
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -38,3 +40,4 @@ make  %{?_smp_mflags}
 
 %files
 %defattr(-,root,root,-)
+/usr/lib64/extensions/no-debug-non-zts-20210902/scrypt.so
