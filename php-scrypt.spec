@@ -4,12 +4,13 @@
 #
 Name     : php-scrypt
 Version  : 1.4.2
-Release  : 12
+Release  : 13
 URL      : https://pecl.php.net//get/scrypt-1.4.2.tgz
 Source0  : https://pecl.php.net//get/scrypt-1.4.2.tgz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause
+Requires: php-scrypt-lib = %{version}-%{release}
 BuildRequires : buildreq-php
 Patch1: PHP-8.patch
 
@@ -20,6 +21,14 @@ with permission of the author); keeping this code in sync with the Tarsnap
 code is highly desirable and explains why there is some functionality
 included here which is not actually used by the scrypt file encryption
 utility.
+
+%package lib
+Summary: lib components for the php-scrypt package.
+Group: Libraries
+
+%description lib
+lib components for the php-scrypt package.
+
 
 %prep
 %setup -q -n scrypt-1.4.2
@@ -39,5 +48,8 @@ make  %{?_smp_mflags}
 
 
 %files
+%defattr(-,root,root,-)
+
+%files lib
 %defattr(-,root,root,-)
 /usr/lib64/extensions/no-debug-non-zts-20210902/scrypt.so
