@@ -4,7 +4,7 @@
 #
 Name     : php-scrypt
 Version  : 2.0.0
-Release  : 28
+Release  : 29
 URL      : https://pecl.php.net/get/scrypt-2.0.0.tgz
 Source0  : https://pecl.php.net/get/scrypt-2.0.0.tgz
 Summary  : No detailed summary available
@@ -53,7 +53,7 @@ make  %{?_smp_mflags}
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/php-scrypt
-cp %{_builddir}/scrypt-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/php-scrypt/7c8e8aab480a0e18a56c200792363ecf71e2ef9b || :
+cp %{_builddir}/scrypt-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/php-scrypt/7c8e8aab480a0e18a56c200792363ecf71e2ef9b
 %make_install
 
 
@@ -62,7 +62,7 @@ cp %{_builddir}/scrypt-%{version}/LICENSE %{buildroot}/usr/share/package-license
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20210902/scrypt.so
+/usr/lib64/extensions/no-debug-non-zts-20220829/scrypt.so
 
 %files license
 %defattr(0644,root,root,0755)
