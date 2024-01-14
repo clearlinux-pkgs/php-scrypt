@@ -7,7 +7,7 @@
 #
 Name     : php-scrypt
 Version  : 2.0.1
-Release  : 52
+Release  : 53
 URL      : https://pecl.php.net/get/scrypt-2.0.1.tgz
 Source0  : https://pecl.php.net/get/scrypt-2.0.1.tgz
 Summary  : No detailed summary available
